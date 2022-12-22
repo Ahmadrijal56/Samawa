@@ -35,7 +35,7 @@
     </record>
 
     <record id="dashboard_action" model="ir.actions.act_window">
-        <field name="name">Dashboard</field>
+        <field name="name">Dashboard Oke</field>
         <field name="res_model">samawa_spektrum.dashboard</field>
         <field name="view_mode">tree,form</field>
     </record>
