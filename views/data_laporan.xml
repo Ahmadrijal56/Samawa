@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <menuitem   id="data_laporan_menu_act" 
+                name="Laporan"
+                parent="masterdata_menu_categ" 
+                sequence="3"/>
+    
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="developer_profil_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_profil.view.tree</field>
+        <field name="model">samawa_spektrum.developer_profil</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama_dev"/>
+                <field name="alamat_dev"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="developer_profil_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_profil.view.form</field>
+        <field name="model">samawa_spektrum.developer_profil</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1 style="margin-right:10px;">Profil Developer</h1>
+                            <field name="nama_dev"/>
+                            <field name="alamat_dev"/>
+                            <field name="telp_dev"/>
+                            <field name="email_dev"/>
+                            <field name="pimpinan_dev"/>
+                            <field name="proyek_dev_aktif"/>
+                            <field name="regis_dev"/>
+                        </group>
+                        <group>
+                            <h1 style="margin-right:10px;">Profil Anda</h1>
+                            <field name="nama_user"/>
+                            <field name="telp_user"/>
+                            <field name="email_user"/>
+                            <field name="user_id"/>
+                            <field name="level_user"/>
+                            <field name="status_user"/>
+                            <field name="image" widget='image' class="oe_avatar"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="developer_profil_action" model="ir.actions.act_window">
+        <field name="name">Developer / Profil</field>
+        <field name="res_model">samawa_spektrum.developer_profil</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="developer_profil_menu_act" 
+                name="Profil"
+                parent="developer_menu_act" 
+                action="developer_profil_action"
+                sequence="21"/>
+    </data>
+</odoo>

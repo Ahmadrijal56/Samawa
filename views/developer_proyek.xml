@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="developer_proyek_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_proyek.view.tree</field>
+        <field name="model">samawa_spektrum.developer_proyek</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama_proyek"/>
+                <field name="lokasi_proyek"/>
+                <field name="luas_proyek"/>
+                <field name="jumlah_unit_proyek"/>
+                <field name="klasifikasi_proyek"/>
+                <field name="konsep_proyek"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="developer_proyek_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_proyek.view.form</field>
+        <field name="model">samawa_spektrum.developer_proyek</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1 style="margin-right:10px;">Data Proyek</h1>
+                            <field name="nama_proyek"/>
+                            <field name="lokasi_proyek"/>
+                            <field name="luas_proyek"/>
+                            <field name="jumlah_unit_proyek"/>
+                            <field name="klasifikasi_proyek"/>
+                            <field name="konsep_proyek"/>
+                            <field name="segmentasi_proyek"/>
+                            <field name="imb_proyek"/>
+                            <field name="izin_lokasi_proyek"/>
+                            <field name="pengesahan_siteplan"/>
+                            <field name="sghb_induk_proyek"/>
+                            <field name="harga_tanah_proyek"/>
+                            <field name="strategis_proyek"/>
+                            <field name="jalan_utama_proyek"/>
+                            <field name="fasilitas_umum_proyek"/>
+                        </group>
+                        <notebook>
+                            <page name="Siteplan" string="Siteplan">
+                            <style>
+                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                            </style>
+                            <field name="picture1" widget="image" class="Your_custom_class"/>
+                            </page>
+                            <page name="Google Map" string="Google map">
+                            <style>
+                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                            </style>
+                            <field name="picture2" widget="image" class="Your_custom_class"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+                <sheet>
+                    <group>
+                        <group>
+                            <h1 style="margin-right:10px;">Status Aplikasi</h1>
+                            <field name="status_proyek"/>
+                            <field name="mulai_aktif_proyek"/>
+                            <field name="batas_aktif_proyek"/>
+                            <field name="sisa_waktu_proyek"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="developer_proyek_action" model="ir.actions.act_window">
+        <field name="name">Developer / Proyek</field>
+        <field name="res_model">samawa_spektrum.developer_proyek</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="developer_proyek_menu_act" 
+                name="Proyek"
+                parent="developer_menu_act" 
+                action="developer_proyek_action"
+                sequence="22"/>
+    </data>
+</odoo>

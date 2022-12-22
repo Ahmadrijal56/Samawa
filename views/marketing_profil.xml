@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="marketing_profil_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.marketing_profil.view.tree</field>
+        <field name="model">samawa_spektrum.marketing_profil</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name_market"/>
+                <field name="level_market"/>
+                <field name="alamat_market"/>
+                <field name="penjualan_market"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="marketing_profil_view_form" model="ir.ui.view">
+
+        <field name="name">samawa_spektrum.marketing_profil.view.form</field>
+        <field name="model">samawa_spektrum.marketing_profil</field>
+        <field name="arch" type="xml">
+            <form string="Profil Marketing">
+                <sheet>
+                    <group>
+                        
+                        <group>
+                        <h1>Profil Marketing</h1>
+                            <field name="name_market"/>
+                            <field name="level_market"/>
+                            <field name="pj_market"/>
+                            <field name="ktp_pj"/>
+                            <field name="alamat_market"/>
+                            <field name="mou_market"/>
+                            <field name="tim_market"/>
+                            <field name="proyek_kerjasama"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="marketing_profil_action" model="ir.actions.act_window">
+        <field name="name">Marketing / Profil Marketing</field>
+        <field name="res_model">samawa_spektrum.marketing_profil</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="marketing_profil_menu_act" 
+                name="Profil Marketing"
+                parent="marketing_menu_act" 
+                action="marketing_profil_action"
+                sequence="41"/>
+    </data>
+</odoo>
