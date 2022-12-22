@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="transaksi_datakonsumen_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_datakonsumen.view.tree</field>
+        <field name="model">samawa_spektrum.transaksi_datakonsumen</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama_konsumen"/>
+                <field name="pekerjaan_konsumen"/>
+                <field name="telp_konsumen"/>
+                <field name="alamat_konsumen"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transaksi_datakonsumen_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_datakonsumen.view.form</field>
+        <field name="model">samawa_spektrum.transaksi_datakonsumen</field>
+        <field name="arch" type="xml">
+            <form string="Detail Data Konsumen">
+                <sheet>
+                <h1>Data Sesuai KTP</h1>
+                    <group>
+                        <group>
+                            <field name="ktp_konsumen"/>
+                            <field name="nama_konsumen"/>
+                            <field name="lahir_konsumen"/>
+                            <field name="jenis_kelamin_konsumen"/>
+                            <field name="agama_konsumen"/>
+                            <field name="status_kawin_konsumen"/>
+                            <field name="pekerjaan_konsumen"/>
+                        </group>
+                        <group>
+                            <field name="alamat_konsumen"/>
+                            <field name="provinsi_konsumen"/>
+                            <field name="kota_konsumen"/>
+                            <field name="kecamatan_konsumen"/>
+                            <field name="kelurahan_konsumen"/>
+                            <field name="rt_rw_konsumen"/>
+                            <field name="kodepos_konsumen"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Data Pribadi Lainnya" name="Data Pribadi Lainnya">
+                        <group>
+                            <field name="telp_konsumen"/>
+                            <field name="alamat_terkini_konsumen"/>
+                            <field name="status_kawin_terkini_konsumen"/>
+                            <field name="jumlah_anak_konsumen"/>
+                            <field name="Kendaraan_konsumen"/>
+                            <field name="nama_kerabat_konsumen"/>
+                            <field name="telp_kerebat_konsumen"/>
+                        </group>
+                        </page>
+                        <page string="Data Perusahaan / Pekerjaan" name="Data Perusahaan / Pekerjaan">
+                        <group>
+                            <field name="nama_perusahaan_konsumen"/>
+                            <field name="alamat_perusahaan_konsumen"/>
+                            <field name="provinsi_perusahaan_konsumen"/>
+                            <field name="kota_perusahaan_konsumen"/>
+                            <field name="kecamatan_perusahaan_konsumen"/>
+                            <field name="kelurahan_perusahaan_konsumen"/>
+                            <field name="rt_rw__perusahaan_konsumen"/>
+                        </group>
+                        <group>
+                            <field name="telp_perusahaan_konsumen"/>
+                            <field name="bidang_perusahaan_konsumen"/>
+                            <field name="lamabekerja_perusahaan_konsumen"/>
+                            <field name="jabatan_perusahaan_konsumen"/>
+                            <field name="penghasilan_pokok_konsumen"/>
+                            <field name="penghasilan_tambahan_konsumen"/>
+                        </group>
+                        </page>
+                        <page string="Data Pasangan" name="Data Pasangan">
+                        <group>
+                            <field name="ktp_pasangan_konsumen"/>
+                            <field name="nama_pasangan_konsumen"/>
+                            <field name="lahir_pasangan_konsumen"/>
+                            <field name="jenis_kelamin_pasangan_konsumen"/>
+                            <field name="agama_pasangan_konsumen"/>
+                            <field name="status_kawin_pasangan_konsumen"/>
+                            <field name="pekerjaan_pasangan_konsumen"/>
+                        </group>
+                        <group>
+                            <field name="alamat_pasangan_konsumen"/>
+                            <field name="provinsi_pasangan_konsumen"/>
+                            <field name="kota_pasangan_konsumen"/>
+                            <field name="kecamatan_pasangan_konsumen"/>
+                            <field name="kelurahan_pasangan_konsumen"/>
+                            <field name="rt_rw_pasangan_konsumen"/>
+                            <field name="kodepos_pasangan_konsumen"/>
+                        </group>
+                        </page>
+                        <page string="Foto" name="Foto">
+                        <group>
+                            <style>
+                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                            </style>
+                            <field name="foto_diri_konsumen" widget="image" class="Your_custom_class"/>
+                            <field name="foto_ktp_konsumen" widget="image" class="Your_custom_class"/>
+                            <field name="foto_npwp_konsumen" widget="image" class="Your_custom_class"/>
+                        </group>
+                        </page>
+                        <page string="Data NPWP" name="data npwp">
+                        <group>
+                            <style>
+                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                            </style>
+                            <field name="foto_npwp_konsumen" widget="image" class="Your_custom_class"/>
+                            <field name="nama_npwp_konsumen" />
+                            <field name="alamat_npwp_konsumen"/>
+                        </group>
+                        </page>
+                        <page string="Status Berkas" name="Status Berkas">
+                        <group>
+                            <field name="copy_ktp"/>
+                            <field name="copy_kk"/>
+                            <field name="slip_gaji_konsumen"/>
+                            <field name="surat_aktif_kerja"/>
+                            <field name="rek_tabungan_konsumen"/>
+                            <field name="pas_foto_konsumen"/>
+                            <field name="skbmr_konsumen"/>
+                        </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transaksi_datakonsumen_action" model="ir.actions.act_window">
+        <field name="name">Transaksi / Data Konsumen</field>
+        <field name="res_model">samawa_spektrum.transaksi_datakonsumen</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="transaksi_datakonsumen_menu_act" 
+                name="Data Konsumen"
+                parent="transaksi_menu_act" 
+                action="transaksi_datakonsumen_action"
+                sequence="51"/>
+    </data>
+</odoo>

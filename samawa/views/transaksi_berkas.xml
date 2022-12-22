@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="transaksi_berkas_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_berkas.view.tree</field>
+        <field name="model">samawa_spektrum.transaksi_berkas</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="no_id"/>
+                <field name="nama_id"/>
+                <field name="alamat"/>
+                <field name="no_handphone"/>
+                <field name="nama_proyek"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transaksi_berkas_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_berkas.view.form</field>
+        <field name="model">samawa_spektrum.transaksi_berkas</field>
+        <field name="arch" type="xml">
+            <form string="Berkas">
+                <sheet>
+                    <group>
+                        <group>
+                            <h2>Data Konsumen</h2>
+                            <field name="no_id"/>
+                            <field name="nama_id"/>
+                            <field name="alamat"/>
+                            <field name="no_handphone"/>
+                            <field name="nama_proyek"/>
+                            <field name="blok"/>
+                            <field name="nama_type"/>
+                            <field name="luas_bangunan"/>
+                            <field name="luas_tanah"/>
+                            <field name="metode_pembelian"/>
+                            <field name="harga_jual"/>
+                            <field name="total_kewajiban_uang_muka"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Data Pribadi" name="pribadi">
+                            <field name="pribadi1"/>
+                            <field name="pribadi2"/>
+                            <field name="pribadi3"/>
+                            <field name="pribadi4"/>
+                            <field name="pribadi5"/>
+                            <field name="pribadi6"/>
+                            <field name="pribadi7"/>
+                        </page>
+                        <page string="Data Perusahaan" name="perusahaan">
+                            <field name="perusahaan1"/>
+                            <field name="perusahaan2"/>
+                            <field name="perusahaan3"/>
+                            <field name="perusahaan4"/>
+                        </page>
+                         <page string="Data Lainya" name="lainya">
+                            <field name="lain1"/>
+                            <field name="lain2"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transaksi_berkas_action" model="ir.actions.act_window">
+        <field name="name">Transaksi / Berkas</field>
+        <field name="res_model">samawa_spektrum.transaksi_berkas</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="transaksi_berkas_menu_act" 
+                name="Berkas"
+                parent="transaksi_menu_act" 
+                action="transaksi_berkas_action"
+                sequence="54"/>
+    </data>
+</odoo>

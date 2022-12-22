@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <menuitem   id="marketing_menu_act" 
+                name="Marketing"
+                parent="masterdata_menu_categ" 
+                sequence="4"/>
+    
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="marketing_fee_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.marketing_fee.view.tree</field>
+        <field name="model">samawa_spektrum.marketing_fee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="marketing_fee_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.marketing_fee.view.form</field>
+        <field name="model">samawa_spektrum.marketing_fee</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="marketing_fee_action" model="ir.actions.act_window">
+        <field name="name">Marketing / Marketing Fee</field>
+        <field name="res_model">samawa_spektrum.marketing_fee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="marketing_fee_menu_act" 
+                name="Fee Marketing"
+                parent="marketing_menu_act" 
+                action="marketing_fee_action"
+                sequence="42"/>
+    </data>
+</odoo>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="developer_stockkavling_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_stockkavling.view.tree</field>
+        <field name="model">samawa_spektrum.developer_stockkavling</field>
+        <field name="arch" type="xml">
+            <tree>
+
+                <field name="type_kavling"/>
+                <field name="blok_kavling" string="Blok"/>
+                <field name="nomor_kavling" string="No."/>
+                <field name="luas_bangunan_kavling" string="LB (m2)"/>
+                <field name="luas_tanah_kavling" string="LT (m2)"/>
+                <field name="hadap_kavling" string="Hadap"/>
+                <field name="status_kavling"/>
+                <field name="status_bangunan_kavling" string="Progres Bangunan" />
+                <field name="total_harga_jual" string="Harga Jual"/>
+                <field name="total_amount_uang_muka" string="Total Kewajiban Uang Muka"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="developer_stockkavling_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.developer_stockkavling.view.form</field>
+        <field name="model">samawa_spektrum.developer_stockkavling</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type_kavling"/>
+                            <field name="blok_kavling"/>
+                            <field name="nomor_kavling"/>
+                            <field name="luas_bangunan_kavling"/>
+                            <field name="luas_tanah_kavling"/>
+                            <field name="hook_kavling"/>
+                            <field name="zona_indent_kavling"/>
+                            <field name="tenor_sisa_kavling"/>
+                            <field name="status_kavling"/>
+                            <field name="hadap_kavling"/>
+                        </group>
+                        <group>
+                            <style>
+                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                            </style>
+                            <field name="foto_kavling" widget="image" class="Your_custom_class"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Harga Jual dan Uang Muka" name="Harga Jual dan Uang Muka">
+                            <group>
+                                <field name="nilai_booking" string='Nilai Booking Fee'/>
+                                <field name="uang_muka" string='Uang Muka'/>
+                                <field name="amount_hook" string='Amount Hook'/>
+                                <field name="biaya_strategis" string='Biaya Strategis'/>
+                                <field name="jalan_utama_kavling" string='*Jalan Utama'/>
+                                <field name="fasilitas_umum_kavling" string='*Fasilitas Umum'/>
+                                <field name="amount_kewajiban_indent" string='Amount Kewajiban Indent'/>
+                                <field name="amount_cicilan_sisa" string='Amount Cicilan Sisa'/>
+                                <field name="total_amount_indent" string='Total Amount Indent'/>
+                                <field name="total_amount_uang_muka" string='Total Amount Uang Muka'/>
+                                <field name="total_harga_jual" string='Total Harga Jual'/>
+                                <field name="harga_jual_cash_cash" string='Harga Jual Cash Cash'/>
+                                <field name="harga_jaul_cash_bertahap" string='Harga Jual Cash Bertahap'/>
+                                <field name="cicilan_indent" string='Cicilan Indent'/>
+                                <field name="cicilan_sisa" string='Cicilan Sisa'/>
+                            </group>
+                        </page>
+                        <page string="Progres Bangunan" name="Progres Bangunan">
+                            <group>
+                                <field name="status_bangunan_kavling" string='Status Bangunan'/>
+                                <field name="tahap_bangunan_kavling" string='Tahap Bangunan (%)'/>
+                                <field name="listrik_kavling" string='Listrik'/>
+                                <field name="pompa_air_kavling" string='Pompa Air'/>
+                            </group>
+                        </page>
+                        <page string="Legalitas" name="Legalitas">
+                            <group>
+                                <field name="no_sertifikat_kavling" string='No. Sertifikat'/>
+                                <field name="no_imb_kavling" string='No. IMB'/>
+                                <field name="no_pbb" string='No. PBB'/>
+                            </group>
+                        </page>
+                        <page string="Fee Marketing" name="Fee Marketing">
+                            <group>
+                                <field name="nilai_fee_unit" string='Nilai Fee Unit'/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="developer_stockkavling_action" model="ir.actions.act_window">
+        <field name="name">Developer / Stock Kavling</field>
+        <field name="res_model">samawa_spektrum.developer_stockkavling</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="developer_stockkavling_menu_act" 
+                name="Stock Kavling"
+                parent="developer_menu_act" 
+                action="developer_stockkavling_action"
+                sequence="23"/>
+    </data>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="dashboard_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.dashboard.view.tree</field>
+        <field name="model">samawa_spektrum.dashboard</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="dashboard_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.dashboard.view.form</field>
+        <field name="model">samawa_spektrum.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="dashboard_action" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">samawa_spektrum.dashboard</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="homepage_menu_root" 
+                name="SAMAWA"
+                sequence="20"/>
+
+    <menuitem   id="masterdata_menu_categ" 
+                name="Menu" 
+                parent="homepage_menu_root"
+                sequence="20"/>
+
+    <menuitem   id="dashboard_menu_act"
+                name="Dashboard" 
+                parent="masterdata_menu_categ" 
+                action="dashboard_action"
+                sequence="1"/>
+    </data>
+</odoo>

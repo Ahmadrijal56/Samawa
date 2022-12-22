@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="transaksi_pembayaran_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_pembayaran.view.tree</field>
+        <field name="model">samawa_spektrum.transaksi_pembayaran</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_inisiasi_pembayaran"/>
+                <field name="no_id"/>
+                <field name="nama_id"/>
+                <field name="alamat"/>
+                <field name="no_handphone"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transaksi_pembayaran_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_pembayaran.view.form</field>
+        <field name="model">samawa_spektrum.transaksi_pembayaran</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1>Pembayaran</h1>
+                            <field name="id_inisiasi_pembayaran"/>
+
+                            <h1>Nama Konsumen</h1>
+                            <field name="no_id"/>
+                            <field name="nama_id"/>
+                            <field name="alamat"/>
+                            <field name="no_handphone"/>
+
+                            <h1>Data Kavling</h1>
+                            <field name="nama_proyek"/>
+                            <field name="no_kontrak"/>
+                            <field name="blok"/>
+                            <field name="nama_type"/>
+                            <field name="luas_bangunan"/>
+                            <field name="luas_tanah"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Detail Pembayaran" name="Detail Pembayaran">
+                            <field name="detail_pembayaran"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transaksi_pembayaran_action" model="ir.actions.act_window">
+        <field name="name">Transaksi / Pembayaran</field>
+        <field name="res_model">samawa_spektrum.transaksi_pembayaran</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="transaksi_pembayaran_menu_act" 
+                name="Pembayaran"
+                parent="transaksi_menu_act" 
+                action="transaksi_pembayaran_action"
+                sequence="53"/>
+    </data>
+</odoo>

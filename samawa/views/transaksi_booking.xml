@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="transaksi_booking_view_tree" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_booking.view.tree</field>
+        <field name="model">samawa_spektrum.transaksi_booking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="booking_id"/>
+                <field name="nama_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transaksi_booking_view_form" model="ir.ui.view">
+        <field name="name">samawa_spektrum.transaksi_booking.view.form</field>
+        <field name="model">samawa_spektrum.transaksi_booking</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <group>
+                            <h1>Booking Unit</h1>
+                            <field name="booking_id"/>
+
+                            <h1>Data Pembeli</h1>
+                            <field name="no_id"/>
+                            <field name="nama_id"/>
+                            <field name="alamat"/>
+                            <field name="no_handphone"/>
+                            
+                            <h1>Data Kavling</h1>
+                            <field name="nama_proyek"/>
+                            <field name="blok"/>
+                            <field name="nama_type"/>
+                            <field name="luas_bangunan"/>
+                            <field name="luas_tanah"/>
+                            <field name="metode_pembelian"/>
+                            <field name="harga_jual"/>
+                            <field name="total_kewajiban_uang_muka"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Jadwal Pembayaran Kewajiban Uang Muka" name="jadwal">
+                            <field name="jadwal_pembayaran"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transaksi_booking_action" model="ir.actions.act_window">
+        <field name="name">Transaksi / Booking</field>
+        <field name="res_model">samawa_spektrum.transaksi_booking</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem   id="transaksi_booking_menu_act" 
+                name="Booking"
+                parent="transaksi_menu_act" 
+                action="transaksi_booking_action"
+                sequence="52"/>
+    </data>
+</odoo>
