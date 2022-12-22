@@ -27,7 +27,7 @@
         <field name="name">samawa_spektrum.developer_stockkavling.view.form</field>
         <field name="model">samawa_spektrum.developer_stockkavling</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="" create="false" edit="false">
                 <sheet>
                     <group>
                         <group>
@@ -48,6 +48,7 @@
                                 .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
                             </style>
                             <field name="foto_kavling" widget="image" class="Your_custom_class"/>
+                            <button name="action_test" string="Upload Foto" class="btn btn-primary o_form_button_edit" type="object"/>
                         </group>
                     </group>
                     <notebook>
@@ -91,6 +92,9 @@
                             </group>
                         </page>
                     </notebook>
+                    <group>
+                        <button name="action_test" string="Edit Detail Kavling" class="btn btn-primary o_form_button_edit" type="object"/>
+                    </group>
                 </sheet>
             </form>
         </field>

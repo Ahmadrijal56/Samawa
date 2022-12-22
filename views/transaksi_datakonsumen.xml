@@ -124,9 +124,14 @@
                             <field name="rek_tabungan_konsumen"/>
                             <field name="pas_foto_konsumen"/>
                             <field name="skbmr_konsumen"/>
+                            <button name="action_test" string="Upload Berkas" class="btn btn-primary o_form_button_edit" type="object"/>
                         </group>
                         </page>
                     </notebook>
+                    <group style="float:left;">
+                        <button name="action_test" string="Edit" class="btn btn-primary o_form_button_edit" type="object"/>
+                        <button name="action_test" string="Print" class="btn btn-primary o_form_button_edit" type="object"/>
+                    </group>
                 </sheet>
             </form>
         </field>

@@ -21,7 +21,7 @@
         <field name="name">samawa_spektrum.developer_proyek.view.form</field>
         <field name="model">samawa_spektrum.developer_proyek</field>
         <field name="arch" type="xml">
-            <form string="">
+            <form string="" create="false">
                 <sheet>
                     <group>
                         <group>
@@ -49,13 +49,17 @@
                                 .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
                             </style>
                             <field name="picture1" widget="image" class="Your_custom_class"/>
+                            <button name="action_test" string="Upload Siteplan" class="btn btn-primary o_form_button_edit" type="object"/>
                             </page>
+                        </notebook>
+                        <notebook style="float:right;">
                             <page name="Google Map" string="Google map">
                             <style>
                                 .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
                                 .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
                             </style>
                             <field name="picture2" widget="image" class="Your_custom_class"/>
+                            <button name="action_test" string="Upload Google Map" class="btn btn-primary o_form_button_edit" type="object"/>
                             </page>
                         </notebook>
                     </group>
@@ -68,6 +72,7 @@
                             <field name="mulai_aktif_proyek"/>
                             <field name="batas_aktif_proyek"/>
                             <field name="sisa_waktu_proyek"/>
+                            <button name="action_test" string="Perpanjang Masa Aktif" class="btn btn-primary o_form_button_edit" type="object"/>
                         </group>
                     </group>
                 </sheet>

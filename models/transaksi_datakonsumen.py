@@ -99,3 +99,6 @@ class Transaksi_datakonsumen(models.Model):
     skbmr_konsumen = fields.Selection([
         ('sudah', 'Sudah Diserahkan'),
         ('belum', 'Kekurangan')], string='SKBMR', default='belum')
+
+    def action_test(self):
+        print("Button Di pencet")

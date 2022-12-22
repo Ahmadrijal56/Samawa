@@ -74,6 +74,9 @@ class Developer_stockkavling(models.Model):
     no_imb_kavling = fields.Char(string='No. IMB')
     no_pbb = fields.Char(string='No. PBB')
 
+    def action_test(self):
+        print("Button Di pencet")
+
 
 
 

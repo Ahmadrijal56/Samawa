@@ -28,3 +28,6 @@ class Developer_proyek(models.Model):
     picture1 = fields.Binary("Siteplan")
     picture2 = fields.Binary("Google Map")
 
+    def action_test(self):
+        print("Button Di pencet")
+

@@ -22,3 +22,7 @@ class Developer_profil(models.Model):
     image = fields.Binary(" ", help="This field holds the image used as avatar for \
         this contact, limited to 1024x1024px",)
 
+
+    def action_test(self):
+        print("Button Di pencet")
+
