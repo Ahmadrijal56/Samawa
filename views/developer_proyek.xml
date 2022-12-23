@@ -21,11 +21,12 @@
         <field name="name">samawa_spektrum.developer_proyek.view.form</field>
         <field name="model">samawa_spektrum.developer_proyek</field>
         <field name="arch" type="xml">
-            <form string="" create="false">
+            <form string="" create="false" edit="false">
                 <sheet>
                     <group>
-                        <group>
-                            <h1 style="margin-right:10px;">Data Proyek</h1>
+                        <group style="float:left;">
+                        
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Proyek</h1>
                             <field name="nama_proyek"/>
                             <field name="lokasi_proyek"/>
                             <field name="luas_proyek"/>
@@ -41,38 +42,37 @@
                             <field name="strategis_proyek"/>
                             <field name="jalan_utama_proyek"/>
                             <field name="fasilitas_umum_proyek"/>
-                        </group>
-                        <notebook>
-                            <page name="Siteplan" string="Siteplan">
-                            <style>
-                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
-                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
-                            </style>
-                            <field name="picture1" widget="image" class="Your_custom_class"/>
-                            <button name="action_test" string="Upload Siteplan" class="btn btn-primary o_form_button_edit" type="object"/>
-                            </page>
-                        </notebook>
-                        <notebook style="float:right;">
-                            <page name="Google Map" string="Google map">
-                            <style>
-                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
-                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
-                            </style>
-                            <field name="picture2" widget="image" class="Your_custom_class"/>
-                            <button name="action_test" string="Upload Google Map" class="btn btn-primary o_form_button_edit" type="object"/>
-                            </page>
-                        </notebook>
-                    </group>
-                </sheet>
-                <sheet>
-                    <group>
-                        <group>
-                            <h1 style="margin-right:10px;">Status Aplikasi</h1>
+        
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Status Aplikasi</h1>
                             <field name="status_proyek"/>
                             <field name="mulai_aktif_proyek"/>
                             <field name="batas_aktif_proyek"/>
                             <field name="sisa_waktu_proyek"/>
                             <button name="action_test" string="Perpanjang Masa Aktif" class="btn btn-primary o_form_button_edit" type="object"/>
+                        </group>
+                        <group style="float:right; ">
+                            <notebook>
+                                <page name="Siteplan" string="Siteplan">
+                                <style>
+                                    .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                    .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                </style>
+                                <field name="picture1" widget="image" class="Your_custom_class"/>
+                                <button name="action_test" string="Upload Siteplan" class="btn btn-primary o_form_button_edit" type="object"/>
+                                </page>
+                            </notebook>
+                        </group>
+                        <group style="float:right;">
+                            <notebook>
+                                <page name="Google Map" string="Google map">
+                                <style>
+                                    .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                    .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                </style>
+                                <field name="picture2" widget="image" class="Your_custom_class"/>
+                                <button name="action_test" string="Upload Google Map" class="btn btn-primary o_form_button_edit" type="object"/>
+                                </page>
+                            </notebook>
                         </group>
                     </group>
                 </sheet>

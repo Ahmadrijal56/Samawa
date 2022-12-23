@@ -21,9 +21,10 @@
         <field name="arch" type="xml">
             <form string="Detail Data Konsumen">
                 <sheet>
-                <h1>Data Sesuai KTP</h1>
                     <group>
-                        <group>
+                        <group style="float:left;">
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Sesuai KTP</h1>
                             <field name="ktp_konsumen"/>
                             <field name="nama_konsumen"/>
                             <field name="lahir_konsumen"/>
@@ -31,8 +32,6 @@
                             <field name="agama_konsumen"/>
                             <field name="status_kawin_konsumen"/>
                             <field name="pekerjaan_konsumen"/>
-                        </group>
-                        <group>
                             <field name="alamat_konsumen"/>
                             <field name="provinsi_konsumen"/>
                             <field name="kota_konsumen"/>
@@ -40,11 +39,8 @@
                             <field name="kelurahan_konsumen"/>
                             <field name="rt_rw_konsumen"/>
                             <field name="kodepos_konsumen"/>
-                        </group>
-                    </group>
-                    <notebook>
-                        <page string="Data Pribadi Lainnya" name="Data Pribadi Lainnya">
-                        <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Pribadi Lainnya</h1>
                             <field name="telp_konsumen"/>
                             <field name="alamat_terkini_konsumen"/>
                             <field name="status_kawin_terkini_konsumen"/>
@@ -52,10 +48,8 @@
                             <field name="Kendaraan_konsumen"/>
                             <field name="nama_kerabat_konsumen"/>
                             <field name="telp_kerebat_konsumen"/>
-                        </group>
-                        </page>
-                        <page string="Data Perusahaan / Pekerjaan" name="Data Perusahaan / Pekerjaan">
-                        <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Perusahaan / Pekerjaan</h1>
                             <field name="nama_perusahaan_konsumen"/>
                             <field name="alamat_perusahaan_konsumen"/>
                             <field name="provinsi_perusahaan_konsumen"/>
@@ -63,18 +57,14 @@
                             <field name="kecamatan_perusahaan_konsumen"/>
                             <field name="kelurahan_perusahaan_konsumen"/>
                             <field name="rt_rw__perusahaan_konsumen"/>
-                        </group>
-                        <group>
                             <field name="telp_perusahaan_konsumen"/>
                             <field name="bidang_perusahaan_konsumen"/>
                             <field name="lamabekerja_perusahaan_konsumen"/>
                             <field name="jabatan_perusahaan_konsumen"/>
                             <field name="penghasilan_pokok_konsumen"/>
                             <field name="penghasilan_tambahan_konsumen"/>
-                        </group>
-                        </page>
-                        <page string="Data Pasangan" name="Data Pasangan">
-                        <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Pasangan</h1>
                             <field name="ktp_pasangan_konsumen"/>
                             <field name="nama_pasangan_konsumen"/>
                             <field name="lahir_pasangan_konsumen"/>
@@ -82,8 +72,6 @@
                             <field name="agama_pasangan_konsumen"/>
                             <field name="status_kawin_pasangan_konsumen"/>
                             <field name="pekerjaan_pasangan_konsumen"/>
-                        </group>
-                        <group>
                             <field name="alamat_pasangan_konsumen"/>
                             <field name="provinsi_pasangan_konsumen"/>
                             <field name="kota_pasangan_konsumen"/>
@@ -91,32 +79,45 @@
                             <field name="kelurahan_pasangan_konsumen"/>
                             <field name="rt_rw_pasangan_konsumen"/>
                             <field name="kodepos_pasangan_konsumen"/>
+
+                            <button name="action_test" string="Edit" class="btn btn-primary o_form_button_edit" type="object"/>
+                            <button name="action_test" string="Print" class="btn btn-primary o_form_button_edit" type="object"/>
                         </group>
-                        </page>
-                        <page string="Foto" name="Foto">
-                        <group>
-                            <style>
-                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
-                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
-                            </style>
-                            <field name="foto_diri_konsumen" widget="image" class="Your_custom_class"/>
-                            <field name="foto_ktp_konsumen" widget="image" class="Your_custom_class"/>
-                            <field name="foto_npwp_konsumen" widget="image" class="Your_custom_class"/>
+
+                        <!-- <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Foto</h1> -->
+                        <group style="float:right;">
+                            
+                            <notebook>
+                                <page string="Foto Diri" name="Foto Diri">
+                                <style>
+                                    .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                    .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                </style>
+                                <field name="foto_diri_konsumen" widget="image" class="Your_custom_class"/>
+                                </page>
+                                <page string="Foto KTP" name="Foto">
+                                <style>
+                                    .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                    .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                </style>
+                                <field name="foto_ktp_konsumen" widget="image" class="Your_custom_class"/>
+                                </page>
+                                <page string="Foto NPWP" name="Foto">
+                                <style>
+                                    .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                    .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                </style>
+                                <field name="foto_npwp_konsumen" widget="image" class="Your_custom_class"/>
+                                </page>
+                            </notebook>
                         </group>
-                        </page>
-                        <page string="Data NPWP" name="data npwp">
-                        <group>
-                            <style>
-                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
-                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
-                            </style>
-                            <field name="foto_npwp_konsumen" widget="image" class="Your_custom_class"/>
-                            <field name="nama_npwp_konsumen" />
-                            <field name="alamat_npwp_konsumen"/>
-                        </group>
-                        </page>
-                        <page string="Status Berkas" name="Status Berkas">
-                        <group>
+
+                        <group style="float:right;">
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data NPWP</h1>
+                                <field name="nama_npwp_konsumen" />
+                                <field name="alamat_npwp_konsumen"/>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Status Berkas</h1>
                             <field name="copy_ktp"/>
                             <field name="copy_kk"/>
                             <field name="slip_gaji_konsumen"/>
@@ -125,12 +126,11 @@
                             <field name="pas_foto_konsumen"/>
                             <field name="skbmr_konsumen"/>
                             <button name="action_test" string="Upload Berkas" class="btn btn-primary o_form_button_edit" type="object"/>
+
+                            <button name="action_test" string="Simpan" class="btn btn-primary o_form_button_edit" type="object"/>
+                            <button name="action_test" string="Lanjut Booking" class="btn btn-primary o_form_button_edit" type="object"/>
+                            <button name="action_test" string="Cancel" class="btn btn-primary o_form_button_edit" type="object"/>
                         </group>
-                        </page>
-                    </notebook>
-                    <group style="float:left;">
-                        <button name="action_test" string="Edit" class="btn btn-primary o_form_button_edit" type="object"/>
-                        <button name="action_test" string="Print" class="btn btn-primary o_form_button_edit" type="object"/>
                     </group>
                 </sheet>
             </form>

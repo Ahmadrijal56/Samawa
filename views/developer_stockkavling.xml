@@ -30,30 +30,22 @@
             <form string="" create="false" edit="false">
                 <sheet>
                     <group>
-                        <group>
-                            <field name="type_kavling"/>
-                            <field name="blok_kavling"/>
-                            <field name="nomor_kavling"/>
-                            <field name="luas_bangunan_kavling"/>
-                            <field name="luas_tanah_kavling"/>
-                            <field name="hook_kavling"/>
-                            <field name="zona_indent_kavling"/>
-                            <field name="tenor_sisa_kavling"/>
-                            <field name="status_kavling"/>
-                            <field name="hadap_kavling"/>
-                        </group>
-                        <group>
-                            <style>
-                                .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
-                                .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
-                            </style>
-                            <field name="foto_kavling" widget="image" class="Your_custom_class"/>
-                            <button name="action_test" string="Upload Foto" class="btn btn-primary o_form_button_edit" type="object"/>
-                        </group>
-                    </group>
-                    <notebook>
-                        <page string="Harga Jual dan Uang Muka" name="Harga Jual dan Uang Muka">
-                            <group>
+
+                        <group style="float:left;">
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Data Kavling</h1>
+                                <field name="type_kavling"/>
+                                <field name="blok_kavling"/>
+                                <field name="nomor_kavling"/>
+                                <field name="luas_bangunan_kavling"/>
+                                <field name="luas_tanah_kavling"/>
+                                <field name="hook_kavling"/>
+                                <field name="zona_indent_kavling"/>
+                                <field name="tenor_sisa_kavling"/>
+                                <field name="status_kavling"/>
+                                <field name="hadap_kavling"/>
+                            
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Harga Jual dan Uang Muka</h1>
                                 <field name="nilai_booking" string='Nilai Booking Fee'/>
                                 <field name="uang_muka" string='Uang Muka'/>
                                 <field name="amount_hook" string='Amount Hook'/>
@@ -69,29 +61,40 @@
                                 <field name="harga_jaul_cash_bertahap" string='Harga Jual Cash Bertahap'/>
                                 <field name="cicilan_indent" string='Cicilan Indent'/>
                                 <field name="cicilan_sisa" string='Cicilan Sisa'/>
-                            </group>
-                        </page>
-                        <page string="Progres Bangunan" name="Progres Bangunan">
-                            <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Fee Marketing</h1>
+                                <field name="nilai_fee_unit" string='Nilai Fee Unit'/>
+
+                        </group>
+
+                        <group style="float:right;">
+                            <notebook>
+                                <page name="Foto Kavling Terbaru" string="Foto Kavling Terbaru">
+                                    <style>
+                                        .openerp .Your_custom_class > img { height: 6000px; width: 10000px; } 
+                                        .openerp .oe_form .oe_form_field_image img { max-width:656px; max-height: 1056px; }
+                                    </style>
+                                    <field name="foto_kavling" widget="image" class="Your_custom_class"/>
+                                    <button name="action_test" string="Upload Foto" class="btn btn-primary o_form_button_edit" type="object"/>
+                                </page>
+                            </notebook>
+                        </group>
+                        
+                        <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Progres Bangunan</h1>
                                 <field name="status_bangunan_kavling" string='Status Bangunan'/>
                                 <field name="tahap_bangunan_kavling" string='Tahap Bangunan (%)'/>
                                 <field name="listrik_kavling" string='Listrik'/>
                                 <field name="pompa_air_kavling" string='Pompa Air'/>
-                            </group>
-                        </page>
-                        <page string="Legalitas" name="Legalitas">
-                            <group>
+
+                            <h1 style="margin-right:10px; background-color: darkseagreen; padding: 10px;">Legalitas</h1>
                                 <field name="no_sertifikat_kavling" string='No. Sertifikat'/>
                                 <field name="no_imb_kavling" string='No. IMB'/>
                                 <field name="no_pbb" string='No. PBB'/>
-                            </group>
-                        </page>
-                        <page string="Fee Marketing" name="Fee Marketing">
-                            <group>
-                                <field name="nilai_fee_unit" string='Nilai Fee Unit'/>
-                            </group>
-                        </page>
-                    </notebook>
+
+                        </group>
+                    </group>
                     <group>
                         <button name="action_test" string="Edit Detail Kavling" class="btn btn-primary o_form_button_edit" type="object"/>
                     </group>
